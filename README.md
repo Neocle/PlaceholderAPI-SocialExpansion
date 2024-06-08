@@ -1,4 +1,4 @@
-# PlaceholderAPI-SocialExpansion*
+# PlaceholderAPI-SocialExpansion
 
 ## How to setup ?
 
