@@ -5,7 +5,7 @@
 - Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) and restart your server.
 - Download latest [Release](https://github.com/Neocle/PlaceholderAPI-SocialExpansion/releases) and place it in `Plugins/PlaceholderAPi/expansions/`
 - Run `/papi reload`
-- Edit `Plugins/PlaceholderAPi/expansions/social/config.yml` and set your Twitch Application [Twitch Client Id](https://dev.twitch.tv/docs/cli/mock-api-command/#getting-your-client-id-and-secret), [Twitch Access Token](https://dev.twitch.tv/docs/cli/token-command/#get-an-access-token) and [Youtube API Key](https://support.google.com/googleapi/answer/6158862?hl=en)
+- Edit `Plugins/PlaceholderAPi/expansions/social/config.yml` and set your Twitch Application [Twitch Client ID](https://dev.twitch.tv/docs/cli/mock-api-command/#getting-your-client-id-and-secret), [Twitch Access Token](https://dev.twitch.tv/docs/cli/token-command/#get-an-access-token) and [Youtube API Key](https://support.google.com/googleapi/answer/6158862?hl=en)
 - Run `/papi reload` again
 - Done!
 
