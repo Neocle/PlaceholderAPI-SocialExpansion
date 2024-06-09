@@ -10,7 +10,7 @@
 - Done!
 
 ### ⚠️ __IMPORTANT:__ It is recommended not to use these placeholders on Holograms, it will lead into APIs quota exceeded, and therefore, placeholders not working as expected!
-
+(If you still want to use Holograms, you should reduce the update interval)
 ## Youtube Placeholders
 
 `%social_youtube_subscribers_count_<username>%`-> Returns subscribers count of <username>
