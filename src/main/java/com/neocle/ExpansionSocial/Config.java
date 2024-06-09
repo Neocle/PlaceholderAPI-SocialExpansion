@@ -33,6 +33,7 @@ public class Config {
             config.set("Twitch.CLIENT_ID", "YOUR_CLIENT_ID_HERE");
             config.set("Twitch.ACCESS_TOKEN", "YOUR_ACCESS_TOKEN_HERE");
             config.set("Youtube.API_KEY", "YOUR_API_KEY_HERE");
+            config.set("Twitter.BEARER_TOKEN", "YOUR_BEARER_TOKEN_HERE");
             save();
         }
     }
@@ -63,5 +64,9 @@ public class Config {
 
     public String getYoutubeAPIKey() {
         return config.getString("Youtube.API_KEY");
+    }
+
+    public String getTwitterBearerToken() {
+        return config.getString("Twitter.BEARER_TOKEN");
     }
 }
