@@ -17,9 +17,14 @@ import java.util.logging.Logger;
 
 public class TwitchPlaceholders {
 
-    private static final HashMap<String, String> TWITCH_CLIENT_ID = new HashMap<>();
-    private static final HashMap<String, String> TWITCH_ACCESS_TOKEN = new HashMap<>();
-    private static final Logger logger = Logger.getLogger("SocialExpansion");
+    private final HashMap<String, String> TWITCH_CLIENT_ID;
+    private final HashMap<String, String> TWITCH_ACCESS_TOKEN;
+    private final Logger logger = Logger.getLogger("SocialExpansion");
+
+    public TwitchPlaceholders(HashMap<String, String> twitchClientId, HashMap<String, String> twitchAccessToken) {
+        this.TWITCH_CLIENT_ID = twitchClientId;
+        this.TWITCH_ACCESS_TOKEN = twitchAccessToken;
+    }
 
     public String getTwitchChannelUrl(String username) {
         return "https://www.twitch.tv/" + username;

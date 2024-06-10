@@ -13,6 +13,7 @@ public class SocialExpansion extends PlaceholderExpansion {
     private final HashMap<String, String> TWITCH_ACCESS_TOKEN = new HashMap<>();
     private final HashMap<String, String> YOUTUBE_API_KEY = new HashMap<>();
     private final Logger logger = Logger.getLogger("SocialExpansion");
+    @SuppressWarnings("unused")
     private final Config configHandler;
 
     private final TwitchPlaceholders twitchPlaceholders;
@@ -20,12 +21,13 @@ public class SocialExpansion extends PlaceholderExpansion {
 
     public SocialExpansion() {
         this.configHandler = new Config(this);
-        this.twitchPlaceholders = new TwitchPlaceholders();
-        this.youtubePlaceholders = new YoutubePlaceholders();
+        this.twitchPlaceholders = new TwitchPlaceholders(TWITCH_CLIENT_ID, TWITCH_ACCESS_TOKEN);
+        this.youtubePlaceholders = new YoutubePlaceholders(YOUTUBE_API_KEY);
     }
 
     @Override
     public boolean register() {
+        @SuppressWarnings("unused")
         FileConfiguration config = new Config(this).load();
         TWITCH_CLIENT_ID.put("default", new Config(this).getTwitchClientId());
         TWITCH_ACCESS_TOKEN.put("default", new Config(this).getTwitchAccessToken());
@@ -87,7 +89,7 @@ public class SocialExpansion extends PlaceholderExpansion {
             case "twitch_channel_id":
                 return twitchPlaceholders.getTwitchUserId(username);
             // YOUTUBE PLACEHOLDERS
-            case "youtube_followers_count":
+            case "youtube_subscribers_count":
                 return String.valueOf(youtubePlaceholders.getYouTubeFollowersCount(username));
             case "youtube_stream_status":
                 return youtubePlaceholders.isYouTubeUserStreaming(username) ? "streaming" : "offline";

@@ -20,6 +20,7 @@ public class Config {
         reload();
     }
 
+    @SuppressWarnings("deprecation")
     public void reload() {
         if (file == null)
             file = new File(

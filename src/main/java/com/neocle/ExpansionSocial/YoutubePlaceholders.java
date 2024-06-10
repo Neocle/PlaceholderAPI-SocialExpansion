@@ -12,9 +12,12 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class YoutubePlaceholders {
+    private final HashMap<String, String> YOUTUBE_API_KEY;
+    private final Logger logger = Logger.getLogger("SocialExpansion");
 
-    private static final HashMap<String, String> YOUTUBE_API_KEY = new HashMap<>();
-    private static final Logger logger = Logger.getLogger("SocialExpansion");
+    public YoutubePlaceholders(HashMap<String, String> youtubeAPIKey) {
+        this.YOUTUBE_API_KEY = youtubeAPIKey;
+    }
 
     public String getYoutubeChannelId(String username) {
         try {
